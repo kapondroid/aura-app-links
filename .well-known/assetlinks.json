@@ -1,0 +1,11 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.kapondroid.unifiedlifemanager",
+      "sha256_cert_fingerprints":
+        ["63:5B:88:24:AA:B3:9F:8C:70:EA:57:FC:00:B1:06:DA:9F:43:67:38:CF:C3:8B:FF:40:72:56:17:B2:31:A2:05"]
+    }
+  }
+]

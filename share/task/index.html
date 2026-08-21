@@ -1,22 +1,83 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>Zenith | Shared Task</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-        body { font-family: sans-serif; display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0; background: #f0f2f5; }
-        .card { background: white; padding: 2rem; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); text-align: center; max-width: 400px; }
-        h1 { color: #6750A4; }
-        .btn { display: inline-block; background: #6750A4; color: white; padding: 12px 24px; border-radius: 100px; text-decoration: none; margin-top: 20px; font-weight: bold; }
+        /* Base page styling */
+        body { 
+            font-family: sans-serif; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            min-height: 100vh; 
+            margin: 0; 
+            background: #f0f2f5; 
+            padding: 20px; /* Prevents the card from touching edges on small screens */
+            box-sizing: border-box;
+        }
+
+        /* Main card container */
+        .card { 
+            background: white; 
+            padding: 2.5rem 2rem; 
+            border-radius: 16px; 
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
+            text-align: center; 
+            max-width: 400px; 
+            width: 100%;
+        }
+
+        /* Added: Restricts the size of the app icon and gives it rounded corners */
+        .app-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 18px;
+            object-fit: cover;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        /* Typography */
+        h1 { 
+            color: #6750A4; 
+            font-size: 1.5rem;
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+        
+        p {
+            color: #4a4a4a;
+            line-height: 1.5;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Added: Play store button styling */
+        .play-button {
+            display: inline-block;
+            transition: transform 0.2s ease;
+        }
+        
+        .play-button:hover {
+            transform: scale(1.05); /* Optional: Adds a nice hover effect */
+        }
+
+        /* Added: Scales down the massive default Google Play badge */
+        .play-button img {
+            width: 180px; 
+            height: auto;
+        }
     </style>
 </head>
 <body>
     <div class="card">
         <!-- Make sure to upload ic_launcher-playstore.png to the same folder on GitHub -->
-        <img src="ic_launcher-playstore.png" alt="Aura Icon" class="app-icon">
+        <img src="ic_launcher-playstore.png" alt="Zenith Icon" class="app-icon">
+        
         <h1>Zenith: Daily Routine Planner</h1>
         <p>A task has been shared with you!</p>
         <p>If you have the Zenith app installed, it should have opened automatically.</p>
+        
         <a href="https://play.google.com/apps/internaltest/4700693153458218073" class="play-button" target="_blank">
             <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play">
         </a>
